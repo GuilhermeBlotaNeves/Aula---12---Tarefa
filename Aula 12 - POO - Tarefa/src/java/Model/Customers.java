@@ -25,8 +25,6 @@ public class Customers {
     public static int getCount() throws Exception {
         ArrayList<Customers> list = new ArrayList<>();
         Class.forName("org.sqlite.JDBC");
-        //O caminho do arquivo deve ser diferente se executado do seu PC
-        //https://www.sqlitetutorial.net/sqlite-sample-database/
         String url = "jdbc:sqlite:C:\\Users\\Fatec\\chinook.db";
         Connection con = DriverManager.getConnection(url);
         Statement stmt = con.createStatement();
@@ -49,9 +47,7 @@ public class Customers {
      public static ArrayList<Customers> getList() throws Exception{
         ArrayList<Customers> list = new ArrayList<>();
         Class.forName("org.sqlite.JDBC");
-        //O caminho do arquivo deve ser diferente se executado do seu PC
-        //https://www.sqlitetutorial.net/sqlite-sample-database/
-        String url = "jdbc:sqlite:C:\\Users\\rlarg\\chinook.db";
+        String url = "jdbc:sqlite:C:\\Users\\Fatec\\chinook.db";
         Connection con = DriverManager.getConnection(url);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery("select * from artists order by name");
